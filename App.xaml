@@ -20,6 +20,13 @@
             <Setter Property="Height" Value="30"/>
             <Setter Property="FontFamily" Value="Verdana"/>
         </Style>
+        <Style TargetType="ComboBox">
+            <Setter Property="Margin" Value="3"/>
+            <Setter Property="Foreground" Value="Black"/>
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="Height" Value="30"/>
+            <Setter Property="FontFamily" Value="Verdana"/>
+        </Style>
         <Style TargetType="Label">
             <Setter Property="Margin" Value="3"/>
             <Setter Property="Foreground" Value="Black"/>

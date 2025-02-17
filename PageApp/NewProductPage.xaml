@@ -22,7 +22,8 @@
         <StackPanel Grid.Row="1" Grid.Column="1" VerticalAlignment="Center" Margin="20">
             <TextBlock Text="Название"/>
             <TextBox x:Name="txbTitle"/>
-            <ComboBox Text="Жанр"/>
+            <TextBlock Text="Жанр"/>
+            <ComboBox x:Name="cmbGenre" ItemsSource="{Binding Genre.title}"/>
             <TextBlock Text="Год выпуска"/>
             <TextBox x:Name="txbYearOfRelease"/>
             <TextBlock Text="Стоимость аренды"/>

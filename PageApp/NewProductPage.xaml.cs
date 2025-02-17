@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DVDyyy.DB;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +24,9 @@ namespace DVDyyy.PageApp
         public NewProductPage()
         {
             InitializeComponent();
+            var collect = BD_Class.connection.Genre.ToList();
+            cmbGenre.ItemsSource = collect;
+            cmbGenre.DisplayMemberPath = "title";
         }
 
         private void ClEventAddNewProduct(object sender, RoutedEventArgs e)
