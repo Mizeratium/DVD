@@ -5,7 +5,7 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:DVDyyy.PageApp"
       mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="800"
+      d:DesignHeight="500" d:DesignWidth="1000" MinHeight="500" MinWidth="1000"
       Title="AdminMenuPage">
 
     <Grid>
@@ -15,24 +15,24 @@
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition Height="0.4*"/>
+            <RowDefinition Height="0.5*"/>
             <RowDefinition Height="7*"/>
             <RowDefinition/>
         </Grid.RowDefinitions>
         <Menu Grid.Row="0" Grid.ColumnSpan="3">
             <MenuItem Header="Товары">
                 <MenuItem Header="Список товаров" Click="MenuItem_Click"/> <!--ProductsListPage-->
-                <MenuItem Header="Добавить товар" Click="MenuItem_Click"/> <!--NewProductPage-->
+                <MenuItem Header="Добавить товар" Click="MenuItem_Click_1"/> <!--NewProductPage-->
             </MenuItem>
             <MenuItem Header="Покупатели">
-                <MenuItem Header="Все клиенты" Click="MenuItem_Click"/> <!--ClientsListPage-->
-                <MenuItem Header="Новый клиент" Click="MenuItem_Click"/> <!--NewClientPage-->
+                <MenuItem Header="Все клиенты" Click="MenuItem_Click_2"/> <!--ClientsListPage-->
+                <MenuItem Header="Новый клиент" Click="MenuItem_Click_3"/> <!--NewClientPage-->
             </MenuItem>
             <MenuItem Header="Сотрудники">
-                <MenuItem Header="Все сотрудники" Click="MenuItem_Click"/> <!--EmployeersListPage-->
-                <MenuItem Header="Новый сотрудник" Click="MenuItem_Click"/> <!--NewEmployeePage-->
+                <MenuItem Header="Все сотрудники" Click="MenuItem_Click_4"/> <!--EmployeersListPage-->
+                <MenuItem Header="Новый сотрудник" Click="MenuItem_Click_5"/> <!--NewEmployeePage-->
             </MenuItem>
-            <MenuItem Header="Отчеты" Click="MenuItem_Click"/>
+            <MenuItem Header="Отчеты" Click="MenuItem_Click_6"/>
         </Menu>
         <Frame x:Name="MenuFrame" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3" NavigationUIVisibility="Hidden"/>
     </Grid>

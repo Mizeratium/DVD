@@ -27,10 +27,13 @@ namespace DVDyyy.PageApp
             InitializeComponent();
         }
 
+        /// <summary>
+        /// Авторизация и определение роли сотрудника
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void ClEventAuto(object sender, RoutedEventArgs e)
         {
-            
-            
             try
             {
                 var _sel = BD_Class.connection.Employee.Where(z => z.login == txbLogin.Text && z.password == txbPassword.Password).FirstOrDefault();
@@ -38,15 +41,15 @@ namespace DVDyyy.PageApp
                 {
                     if (_sel.id_role == 1)
                     {
-                        NavigationService.Navigate(new PageApp.AdminMenuPage());
+                        NavigationService.Navigate(new PageApp.AdminMenuPage()); //Администратор
                     }
                     else if (_sel.id_role == 2)
                     {
-                        NavigationService.Navigate(new PageApp.CashierPage());
+                        NavigationService.Navigate(new PageApp.CashierPage()); //Кассир
                     }
                     else
                     {
-                        NavigationService.Navigate(new PageApp.EmployeePage());
+                        NavigationService.Navigate(new PageApp.EmployeePage()); //Сотрудник зала
                     }
                 }
             }
