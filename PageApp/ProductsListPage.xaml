@@ -18,10 +18,16 @@
             <ComboBox x:Name="cmbSearch" Width="150" Margin="5"/>
             <Button Content="Поиск"/>
         </DockPanel>
-        <ListView Grid.Row="1">
+        <ListView x:Name="ProdList" Grid.Row="1">
             <ListView.ItemTemplate>
                 <DataTemplate>
-                    
+                    <DockPanel>
+                        <TextBlock Text="{Binding ID }" Foreground="Gray"/>
+                        <TextBlock Text="{Binding title }"/>
+                        <TextBlock Text="{Binding Genre.title }"/>
+                        <TextBlock Text="{Binding year_of_release }" Foreground="Gray"/>
+                        <TextBlock Text="{Binding rental_cost }" HorizontalAlignment="Right"/>
+                    </DockPanel>
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DVDyyy.DB;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +24,7 @@ namespace DVDyyy.PageApp
         public EmployeersListPage()
         {
             InitializeComponent();
+            EmployeeList.ItemsSource = BD_Class.connection.Employee.ToList();
         }
     }
 }

@@ -18,10 +18,19 @@
             <ComboBox x:Name="cmbSearch" Width="150" Margin="5"/>
             <Button Content="Поиск" Margin="5"/>
         </DockPanel>
-        <ListView Grid.Row="1">
+        <ListView x:Name="EmployeeList" Grid.Row="1">
             <ListView.ItemTemplate>
                 <DataTemplate>
-
+                    <DockPanel>
+                        <TextBlock Text="{Binding ID }" Foreground="Gray"/>
+                        <TextBlock Text="{Binding surname }"/>
+                        <TextBlock Text="{Binding name }"/>
+                        <TextBlock Text="{Binding patronymic }"/>
+                        <TextBlock Text="{Binding phone }"/>
+                        <TextBlock Text="{Binding Role.title }"/>
+                        <TextBlock Text="{Binding login }" Foreground="CadetBlue"/>
+                        <TextBlock Text="{Binding password }" Foreground="CadetBlue"/>
+                    </DockPanel>
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
